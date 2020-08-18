@@ -2,22 +2,17 @@
   "name": "chat-service",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "up": "npm run docker:build && npm run docker:push && npm run k8s:deploy",
-    "docker:build": "sudo docker build --target prod -t kpatel20538/livestream-chat:chat . && sudo docker build --target dev -t kpatel20538/livestream-chat:chat-dev .",
-    "docker:push": "sudo docker push kpatel20538/livestream-chat:chat && sudo docker push kpatel20538/livestream-chat:chat-dev",
-    "k8s:deploy": "kubectl apply -f ../k8s/chat-service.yml --wait && kubectl rollout restart deployment chat"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "kpatel20538",
+  "license": "MIT",
   "dependencies": {
     "koa": "^2.13.0",
     "koa-route": "^3.2.0",
-    "koa-static": "^5.0.0",
     "koa-websocket": "^6.0.0",
     "uuid": "^8.3.0"
   },

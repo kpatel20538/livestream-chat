@@ -1,8 +1,6 @@
 const Koa = require("koa");
 const route = require("koa-route");
 const websockify = require("koa-websocket");
-const serve = require("koa-static");
-
 const ChatRoom = require("./chat-room");
 
 const app = websockify(new Koa());
