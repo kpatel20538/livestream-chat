@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  rules:
+  - host: livestream-kpatel20538.cloud.okteto.net
+    http:
+      paths:
+      - path: /chat
+        backend:
+          serviceName: chat
+          servicePort: 80
+      - path: /players
+        backend:
+          serviceName: livestream
+          servicePort: 80
+      - path: /hls
+        backend:
+          serviceName: livestream
+          servicePort: 80
+      - path: /dash
+        backend:
+          serviceName: livestream
+          servicePort: 80
+  tls:
+  - hosts:
+    - livestream-kpatel20538.cloud.okteto.net
