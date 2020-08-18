@@ -7,7 +7,7 @@ import Viewer from './src/screens/Viewer';
 
 const Stack = createStackNavigator();
 
-function App() {
+const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>

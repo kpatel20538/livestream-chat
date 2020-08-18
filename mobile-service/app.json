@@ -17,10 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "io.github.kpatel20538.livestreamchat"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "android": {
+      "package": "io.github.kpatel20538.livestreamchat"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
