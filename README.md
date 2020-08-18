@@ -9,7 +9,7 @@ Click the button,
 or run the following command to deploy on your favorite k8s cluster
 
 ```bash
-$ kubectl -f ./k8s
+$ kubectl apply -f ./k8s
 ```
 
 ### Develop
